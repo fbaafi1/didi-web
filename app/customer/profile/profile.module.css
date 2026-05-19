@@ -1,0 +1,30 @@
+.page { min-height: 100vh; background: var(--color-bg); }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
+.backBtn { background: none; border: none; cursor: pointer; display: flex; align-items: center; }
+.headerTitle { color: var(--color-text); font-size: var(--fs-lg); font-weight: 800; }
+.profileCard { display: flex; flex-direction: column; align-items: center; padding: 32px 24px; gap: 8px; }
+.avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; box-shadow: 0 6px 20px rgba(255,90,31,0.4); }
+.avatarText { color: var(--color-white); font-size: 32px; font-weight: 800; }
+.name { color: var(--color-text); font-size: var(--fs-xl); font-weight: 800; }
+.role { color: var(--color-primary); font-size: var(--fs-sm); font-weight: 600; }
+.phoneRow { display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+.phone { color: var(--color-text-muted); font-size: var(--fs-sm); }
+.menuCard { margin: 8px 20px 0; background: var(--color-card); border-radius: 20px; overflow: hidden; border: 1px solid var(--color-border); }
+.menuItem { display: flex; align-items: center; padding: 16px; gap: 12px; border-bottom: 1px solid var(--color-border); background: none; border-left: none; border-right: none; border-top: none; width: 100%; cursor: pointer; text-decoration: none; color: inherit; transition: background 0.15s; }
+.menuItem:last-child { border-bottom: none; }
+.menuItem:hover { background: var(--color-surface-elevated); }
+.menuIcon { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,90,31,0.13); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.menuLabel { color: var(--color-text); font-size: var(--fs-base); font-weight: 600; text-align: left; }
+.menuSub { color: var(--color-text-muted); font-size: var(--fs-xs); margin-top: 2px; text-align: left; }
+.signOutBtn { display: flex; align-items: center; gap: 10px; margin: 16px 20px 0; background: var(--color-card); border-radius: 16px; padding: 18px; border: 1px solid var(--color-border); width: calc(100% - 40px); cursor: pointer; transition: background 0.15s; }
+.signOutBtn:hover { background: var(--color-surface-elevated); }
+.signOutText { color: var(--color-error); font-size: var(--fs-base); font-weight: 600; }
+.modalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: flex; align-items: flex-end; z-index: 200; }
+.modalSheet { background: var(--color-card); border-top-left-radius: 24px; border-top-right-radius: 24px; max-height: 88vh; width: 100%; display: flex; flex-direction: column; padding-bottom: 28px; }
+.modalHeader { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 8px; }
+.modalTitle { color: var(--color-text); font-size: var(--fs-lg); font-weight: 800; }
+.tabRow { display: flex; gap: 8px; margin: 0 20px 12px; }
+.tab { flex: 1; padding: 10px; border-radius: 12px; border: 1px solid var(--color-border); background: var(--color-surface-elevated); color: var(--color-text-secondary); font-size: var(--fs-sm); font-weight: 700; cursor: pointer; transition: all 0.2s; }
+.tabActive { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-white); }
+.legalScroll { padding: 0 20px; overflow-y: auto; max-height: 420px; }
+.legalBody { color: var(--color-text-secondary); font-size: var(--fs-sm); line-height: 1.7; white-space: pre-wrap; }

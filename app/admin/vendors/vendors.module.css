@@ -1,0 +1,42 @@
+.page { min-height: 100vh; background: var(--color-bg); }
+.header { padding: 16px 20px; }
+.headerTitle { color: var(--color-text); font-size: var(--fs-xl); font-weight: 800; }
+.tabBar { display: flex; margin: 0 20px 16px; background: var(--color-surface-elevated); border-radius: 14px; padding: 4px; gap: 2px; border: 1px solid var(--color-border); }
+.tab { flex: 1; padding: 8px; border-radius: 10px; border: none; background: transparent; color: var(--color-text-muted); font-size: var(--fs-sm); font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.tabActive { background: var(--color-primary); color: var(--color-white); }
+.searchBar { display: flex; align-items: center; gap: 8px; margin: 0 20px 14px; background: var(--color-surface-elevated); border-radius: 14px; padding: 10px 14px; border: 1px solid var(--color-border); }
+.searchInput { flex: 1; background: transparent; border: none; outline: none; color: var(--color-text); font-size: var(--fs-sm); }
+.list { padding: 0 20px; display: flex; flex-direction: column; gap: 14px; padding-bottom: 80px; }
+.card { background: var(--color-card); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 14px; border: 1px solid var(--color-border); }
+.cardTop { display: flex; align-items: flex-start; gap: 12px; }
+.cardAvatar { width: 48px; height: 48px; border-radius: 14px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; font-weight: 800; flex-shrink: 0; }
+.cardName { color: var(--color-text); font-size: var(--fs-base); font-weight: 800; }
+.cardCategory { color: var(--color-text-secondary); font-size: var(--fs-xs); margin-top: 2px; }
+.cardVendor { color: var(--color-text-muted); font-size: var(--fs-xs); margin-top: 2px; }
+.cardPhone { color: var(--color-text-muted); font-size: var(--fs-xs); }
+.statusBadge { border-radius: 10px; padding: 5px 10px; flex-shrink: 0; font-size: var(--fs-xs); font-weight: 700; white-space: nowrap; }
+.badgePending { background: rgba(245,158,11,0.15); color: var(--color-warning); }
+.badgeActive { background: rgba(34,197,94,0.15); color: var(--color-success); }
+.badgeExpired { background: rgba(239,68,68,0.15); color: var(--color-error); }
+.actions { display: flex; gap: 10px; }
+.approveBtn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--color-success); color: #fff; font-size: var(--fs-sm); font-weight: 700; padding: 12px; border-radius: 12px; border: none; cursor: pointer; }
+.rejectBtn { display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 12px; padding: 12px 16px; border: 1px solid var(--color-error); background: transparent; color: var(--color-error); font-size: var(--fs-sm); font-weight: 700; cursor: pointer; }
+.subBtn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 12px; padding: 12px; border: 1.5px solid var(--color-primary); background: transparent; color: var(--color-primary); font-size: var(--fs-sm); font-weight: 700; cursor: pointer; }
+.empty { display: flex; flex-direction: column; align-items: center; padding-top: 80px; gap: 10px; color: var(--color-text-secondary); font-size: var(--fs-base); }
+.modalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 200; display: flex; align-items: flex-end; }
+.modal { background: var(--color-bg); border-top-left-radius: 24px; border-top-right-radius: 24px; width: 100%; max-height: 90vh; display: flex; flex-direction: column; }
+.modalHeader { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--color-border); }
+.modalTitle { color: var(--color-text); font-size: var(--fs-xl); font-weight: 800; }
+.modalBody { padding: 20px; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; padding-bottom: 40px; }
+.restSummary { background: var(--color-surface-elevated); border-radius: 14px; padding: 14px; border: 1px solid var(--color-border); }
+.restSummaryName { color: var(--color-text); font-size: var(--fs-lg); font-weight: 700; }
+.restSummarySub { color: var(--color-text-secondary); font-size: var(--fs-sm); margin-top: 2px; }
+.sectionLabel { color: var(--color-text-muted); font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.planCard { display: flex; align-items: flex-start; gap: 12px; background: var(--color-card); border-radius: 16px; padding: 16px; border: 1.5px solid var(--color-border); cursor: pointer; width: 100%; transition: all 0.2s; }
+.planCardActive { border-color: var(--color-primary); background: rgba(255,90,31,0.04); }
+.planName { color: var(--color-text); font-size: var(--fs-base); font-weight: 800; }
+.planDays { color: var(--color-text-secondary); font-size: var(--fs-sm); margin-top: 2px; }
+.planFeature { color: var(--color-text-muted); font-size: var(--fs-xs); }
+.input { width: 100%; background: var(--color-surface-elevated); border-radius: 14px; border: 1px solid var(--color-border); color: var(--color-text); font-size: var(--fs-base); padding: 14px; outline: none; font-family: var(--font-family); resize: vertical; }
+.input:focus { border-color: var(--color-primary); }
+.summaryBox { background: rgba(255,90,31,0.06); border-radius: 12px; padding: 14px; border: 1px solid rgba(255,90,31,0.3); color: var(--color-text-secondary); font-size: var(--fs-sm); line-height: 1.6; }

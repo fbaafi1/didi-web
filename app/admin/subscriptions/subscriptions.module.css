@@ -1,0 +1,26 @@
+.page { min-height: 100vh; background: var(--color-bg); }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
+.headerTitle { color: var(--color-text); font-size: var(--fs-xl); font-weight: 800; }
+.headerSub { color: var(--color-text-secondary); font-size: var(--fs-sm); margin-top: 2px; }
+.refreshBtn { width: 40px; height: 40px; border-radius: 12px; background: rgba(255,90,31,0.1); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.tabBar { display: flex; margin: 0 20px 16px; background: var(--color-surface-elevated); border-radius: 14px; padding: 4px; gap: 2px; border: 1px solid var(--color-border); }
+.tab { flex: 1; padding: 8px; border-radius: 10px; border: none; background: transparent; color: var(--color-text-muted); font-size: var(--fs-sm); font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.tabActive { background: var(--color-primary); color: #fff; }
+.searchBar { display: flex; align-items: center; gap: 8px; margin: 0 20px 14px; background: var(--color-surface-elevated); border-radius: 14px; padding: 10px 14px; border: 1px solid var(--color-border); }
+.searchInput { flex: 1; background: transparent; border: none; outline: none; color: var(--color-text); font-size: var(--fs-sm); }
+.list { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; padding-bottom: 80px; }
+.empty { text-align: center; padding: 80px 20px; color: var(--color-text-muted); font-size: var(--fs-base); }
+.card { background: var(--color-card); border-radius: 20px; padding: 16px; border: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 10px; }
+.cardTop { display: flex; align-items: flex-start; gap: 12px; }
+.cardAvatar { width: 44px; height: 44px; border-radius: 12px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; font-weight: 800; flex-shrink: 0; }
+.cardName { color: var(--color-text); font-size: var(--fs-base); font-weight: 800; }
+.cardMeta { color: var(--color-text-muted); font-size: var(--fs-xs); margin-top: 2px; }
+.cardPlan { color: var(--color-primary); font-size: var(--fs-sm); font-weight: 700; margin-top: 4px; }
+.badge { border-radius: 10px; padding: 4px 10px; font-size: var(--fs-xs); font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+.badgeActive { background: rgba(34,197,94,0.15); color: var(--color-success); }
+.badgeExpired { background: rgba(239,68,68,0.15); color: var(--color-error); }
+.barTrack { height: 4px; background: var(--color-border); border-radius: 2px; }
+.bar { height: 4px; background: var(--color-success); border-radius: 2px; transition: width 0.5s; }
+.cardFooter { display: flex; flex-direction: column; gap: 2px; }
+.footerDate { color: var(--color-text-muted); font-size: var(--fs-xs); }
+.footerNote { color: var(--color-text-secondary); font-size: var(--fs-xs); font-style: italic; }

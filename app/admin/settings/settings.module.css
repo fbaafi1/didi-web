@@ -1,0 +1,19 @@
+.page { min-height: 100vh; background: var(--color-bg); }
+.header { padding: 16px 20px; }
+.headerTitle { color: var(--color-text); font-size: var(--fs-xl); font-weight: 800; }
+.scroll { padding: 20px; display: flex; flex-direction: column; gap: 20px; padding-bottom: 80px; }
+.card { background: var(--color-card); border-radius: 20px; padding: 20px; border: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 16px; }
+.cardTitle { color: var(--color-text); font-size: var(--fs-lg); font-weight: 800; }
+.cardSub { color: var(--color-text-secondary); font-size: var(--fs-sm); line-height: 1.5; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.fieldLabel { color: var(--color-text-secondary); font-size: var(--fs-sm); font-weight: 600; }
+.input { background: var(--color-surface-elevated); border-radius: 14px; border: 1px solid var(--color-border); color: var(--color-text); font-size: var(--fs-base); padding: 14px; outline: none; width: 100%; font-family: var(--font-family); }
+.input:focus { border-color: var(--color-primary); }
+.saveBtn { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-primary); color: #fff; border-radius: 14px; padding: 16px; border: none; cursor: pointer; font-size: var(--fs-base); font-weight: 700; box-shadow: var(--shadow-primary); }
+.saveBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+.infoCard { background: var(--color-card); border-radius: 20px; padding: 20px; border: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 12px; }
+.infoTitle { color: var(--color-text); font-size: var(--fs-lg); font-weight: 800; margin-bottom: 4px; }
+.infoRow { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--color-border); }
+.infoRow:last-child { border-bottom: none; }
+.infoKey { color: var(--color-text-secondary); font-size: var(--fs-sm); }
+.infoVal { color: var(--color-text); font-size: var(--fs-sm); font-weight: 700; }

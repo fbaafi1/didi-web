@@ -1,0 +1,239 @@
+/* ── Login page ── */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--color-bg);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 36px 32px;
+  animation: fadeIn 0.35s ease;
+}
+
+/* Header */
+.login-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.login-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #0F172A;
+  border: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+  flex-shrink: 0;
+}
+
+.login-logo-text {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.login-title {
+  color: var(--color-text);
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.login-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  margin-top: 3px;
+}
+
+/* Tab bar */
+.login-tabs {
+  display: flex;
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  margin-bottom: 28px;
+  gap: 4px;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.login-tab.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-primary);
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Password row */
+.pwd-row {
+  display: flex;
+  align-items: center;
+}
+
+.pwd-row .form-input {
+  flex: 1;
+}
+
+.eye-btn {
+  padding: 0 14px;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.eye-btn:hover { color: var(--color-text-secondary); }
+
+/* Role selector */
+.role-row {
+  display: flex;
+  gap: 12px;
+}
+
+.role-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.role-btn:hover { border-color: var(--color-text-muted); }
+
+.role-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.role-btn-label {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-base);
+  font-weight: 700;
+}
+
+.role-btn.active .role-btn-label { color: var(--color-white); }
+
+.role-btn-sub {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+}
+
+.role-btn.active .role-btn-sub { color: rgba(255,255,255,0.8); }
+
+/* Section divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider-label {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Category chips */
+.category-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.cat-chip {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.cat-chip:hover { border-color: var(--color-text-muted); }
+.cat-chip.active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-white); }
+
+/* Note box */
+.note-box {
+  display: flex;
+  gap: 8px;
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+
+.note-text {
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* Error message */
+.error-msg {
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  color: var(--color-error);
+  font-size: var(--fs-sm);
+}

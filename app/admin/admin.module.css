@@ -1,0 +1,16 @@
+.page { min-height: 100vh; background: var(--color-bg); }
+.header { padding: 16px 20px; }
+.headerTitle { color: var(--color-text); font-size: var(--fs-xl); font-weight: 800; }
+.scroll { padding: 20px; display: flex; flex-direction: column; gap: 20px; padding-bottom: 80px; }
+.statsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+@media (min-width: 640px) { .statsGrid { grid-template-columns: repeat(4, 1fr); } }
+.statCard { background: var(--color-card); border-radius: 16px; padding: 16px; border-left: 3px solid; border-top: 1px solid var(--color-border); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 6px; }
+.statIcon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.statValue { color: var(--color-text); font-size: var(--fs-2xl); font-weight: 800; margin-top: 4px; }
+.statLabel { color: var(--color-text-secondary); font-size: var(--fs-xs); }
+.guideCard { background: var(--color-card); border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 14px; border: 1px solid var(--color-border); }
+.guideTitle { color: var(--color-text); font-size: var(--fs-lg); font-weight: 800; margin-bottom: 4px; }
+.guideRow { display: flex; align-items: center; gap: 12px; }
+.stepBadge { width: 28px; height: 28px; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.stepNum { color: var(--color-white); font-size: var(--fs-sm); font-weight: 800; }
+.guideText { color: var(--color-text-secondary); font-size: var(--fs-sm); flex: 1; }
