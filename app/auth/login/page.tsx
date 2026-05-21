@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Eye, EyeOff, Mail, Lock, Phone, User, Store, MapPin, Map, UtensilsCrossed, Info, ArrowLeft } from 'lucide-react';
 import { supabase } from '@/services/supabase';
@@ -10,7 +10,7 @@ import styles from './login.module.css';
 type AuthTab = 'signin' | 'register';
 type RegisterRole = 'customer' | 'vendor';
 
-export default function LoginPage() {
+function LoginPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const returnTo     = searchParams.get('returnTo');
@@ -378,5 +378,13 @@ export default function LoginPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}><span className="spinner" /></div>}>
+      <LoginPageInner />
+    </Suspense>
   );
 }

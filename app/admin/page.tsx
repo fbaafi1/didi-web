@@ -19,7 +19,8 @@ export default function AdminDashboardPage() {
           supabase.from('restaurants').select('id, is_approved, subscription_expires_at'),
           supabase.from('restaurants').select('id', { count: 'exact', head: true }).eq('is_approved', false),
         ]);
-        const all = totalRes.data ?? [];
+        type Row = { id: string; is_approved: boolean | null; subscription_expires_at: string | null };
+        const all = (totalRes.data ?? []) as Row[];
         const now = new Date();
         const active  = all.filter(r => r.is_approved && r.subscription_expires_at && new Date(r.subscription_expires_at) >= now).length;
         const expired = all.filter(r => r.is_approved && (!r.subscription_expires_at || new Date(r.subscription_expires_at) < now)).length;

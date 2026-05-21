@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import type { Session, AuthChangeEvent } from '@supabase/supabase-js';
 import { useAuthStore } from '@/store/authStore';
 import { supabase } from '@/services/supabase';
 
@@ -14,10 +15,10 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     // Hydrate session on mount
-    supabase.auth.getSession().then(({ data: { session } }) => setSession(session));
+    supabase.auth.getSession().then(({ data }: { data: { session: Session | null } }) => setSession(data.session));
 
     // Listen for sign-in / sign-out events
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: AuthChangeEvent, session: Session | null) => {
       setSession(session);
     });
 

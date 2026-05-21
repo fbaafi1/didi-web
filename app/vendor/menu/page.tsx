@@ -35,7 +35,7 @@ export default function VendorMenuPage() {
 
   useEffect(() => {
     fetchItems();
-    supabase.from('categories').select('*').order('sort_order').then(({ data }) => { if (data) setCategories(data as Category[]); });
+    supabase.from('categories').select('*').order('sort_order').then(({ data }: { data: Category[] | null }) => { if (data) setCategories(data); });
   }, [fetchItems]);
 
   const openAdd = () => { setEditing(null); setName(''); setDesc(''); setPrice(''); setCatId(null); setAvailable(true); setPhotos([null, null, null, null]); setModal(true); };

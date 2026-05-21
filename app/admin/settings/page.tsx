@@ -13,7 +13,7 @@ export default function AdminSettingsPage() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    supabase.from('app_settings').select('support_email, support_phone').eq('id', 1).maybeSingle().then(({ data }) => {
+    supabase.from('app_settings').select('support_email, support_phone').eq('id', 1).maybeSingle().then(({ data }: { data: { support_email: string | null; support_phone: string | null } | null }) => {
       if (data) { setSupportEmail(data.support_email ?? ''); setSupportPhone(data.support_phone ?? ''); }
       setLoading(false);
     });

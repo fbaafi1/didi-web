@@ -15,7 +15,7 @@ export default function VendorSettingsPage() {
   const [legalTab, setLegalTab] = useState<'terms' | 'privacy'>('terms');
 
   useEffect(() => {
-    supabase.from('app_settings').select('support_email, support_phone').eq('id', 1).maybeSingle().then(({ data }) => {
+    supabase.from('app_settings').select('support_email, support_phone').eq('id', 1).maybeSingle().then(({ data }: { data: { support_email: string | null; support_phone: string | null } | null }) => {
       if (data) { setSupportEmail(data.support_email ?? PLATFORM.supportEmail ?? ''); setSupportPhone(data.support_phone ?? PLATFORM.supportPhone ?? ''); }
     });
   }, []);
